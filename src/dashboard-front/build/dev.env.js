@@ -37,7 +37,11 @@ const NODE_ENV = JSON.stringify('development')
 
 export default merge(prodEnv, {
     NODE_ENV: NODE_ENV,
-    LOCAL_DEV_URL: JSON.stringify(''), // 本地运行的url，例如 http://dev.bkapps-t.example.com
-    LOCAL_DEV_PORT: JSON.stringify('5000'),
-    AJAX_MOCK_PARAM: JSON.stringify('mock-file')
+    LOCAL_DEV_URL: JSON.stringify('http://dev-apigw.bkee5-ipv6.bkcanway.com'), // 本地运行的url
+    LOCAL_DEV_PORT: JSON.stringify('8000'),  // 本地运行端口
+    AJAX_MOCK_PARAM: JSON.stringify('mock-file'),
+    DASHBOARD_URL: 'http://dev-apigw.bkee5-ipv6.bkcanway.com:8000/backend', // 后端接口前缀
+    APISUPPORT_URL: 'http://dev-apigw.bkee5-ipv6.bkcanway.com:8000/backend/docs', // 文档地址前缀
+    BK_LOGIN_SIGN_IN_URL: 'http://bkee5-ipv6.bkcanway.com/login', // 跳转登录地址
+    DASHBOARD_CSRF_COOKIE_NAME: 'bk_apigateway_csrftoken', // CSRF cookie名称
 })

@@ -4,7 +4,7 @@ run-te:
 
 .PHONY: run-ee
 run-ee:
-	tnpm run dev:ee
+	npm run dev:ee
 
 .PHONY: update
 update:
